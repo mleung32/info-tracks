@@ -9,11 +9,6 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 class App extends Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   rend: 'HOME',
-    // }
-    // this.showComp=this.showComp.bind(this);
-    // this.route=this.route.bind(this);
   }
   
   render() {

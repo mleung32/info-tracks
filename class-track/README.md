@@ -1,3 +1,11 @@
+### INFO Tracks
+A website for students in the Master of Information Management (MIMS) program at UC Berkeley to find class recommendations in common focus areas. The site currently contains track information for user experience, software engineering, product management, and data science.  
+
+### Built With
+* HTML5
+* CSS
+* Javascript (React, React Router)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
