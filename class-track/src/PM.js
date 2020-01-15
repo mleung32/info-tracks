@@ -3,6 +3,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faHome} from '@fortawesome/free-solid-svg-icons'
 import PMClasses from "./img/PMClasses.js"
 import * as c from "./AllClasses.js"
+import {Link} from "react-router-dom"
 
 class PM extends Component {
   constructor(props) {
@@ -46,7 +47,9 @@ class PM extends Component {
   render() {
     return (
       <div className="containerTrack">
-        <FontAwesomeIcon icon={faHome} className="pointer" id="home" onClick={(e) => this.props.route(e.target.id)} size="2x" color="#544BF5"/>
+        <Link to="/" id="home">
+          <FontAwesomeIcon icon={faHome} className="pointer" size="2x" color="#544BF5"/>
+        </Link>
         {this.showSidebar()}
         <PMClasses updateSidebar={this.updateSidebar}/>
       </div>
@@ -58,7 +61,7 @@ const Welcome = () => {
   return (
     <div className="sidebar">
       <h1>Product Management</h1>
-      <p>Quo nibh tantas ea, vim in dicat diceret. Ferri facete vocibus duo ad, doctus democritum usu cu. No has dicam fabulas, ne cum justo choro, ad his duis erroribus persequeris. Ad natum rationibus consequuntur usu, no quando libris eripuit ius.</p>
+      <p>Click on classes in the diagram to learn more about different offerings.</p>
     </div>
   )
 };

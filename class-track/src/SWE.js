@@ -3,6 +3,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faHome} from '@fortawesome/free-solid-svg-icons'
 import {SWEClasses} from './img/SWEClasses'
 import * as c from "./AllClasses.js"
+import {Link} from "react-router-dom"
 
 class SWE extends Component {
   constructor(props) {
@@ -44,11 +45,11 @@ class SWE extends Component {
   render() {
     return (            
       <div className="containerTrack">
-        <FontAwesomeIcon icon={faHome} className="pointer classes" id="home" onClick={(e) => this.props.route(e.target.id)} size="2x" color="#544BF5"/>
+        <Link to="/" id="home">
+          <FontAwesomeIcon icon={faHome} className="pointer classes" size="2x" color="#544BF5"/>
+        </Link>
         {this.showSidebar()}
         <SWEClasses updateSidebar={this.updateSidebar}/>
-
-
       </div>
     )
   }
@@ -59,7 +60,7 @@ const SWEWelcome = () => {
   return (
     <div className="sidebar">
       <h1>Software Engineering</h1>
-      <p>Quo nibh tantas ea, vim in dicat diceret. Ferri facete vocibus duo ad, doctus democritum usu cu. No has dicam fabulas, ne cum justo choro, ad his duis erroribus persequeris. Ad natum rationibus consequuntur usu, no quando libris eripuit ius.</p>
+      <p>Click on classes in the diagram to learn more about different offerings.</p>
     </div>
   )
 };

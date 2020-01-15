@@ -19,15 +19,21 @@
 
 .welcome h1 {
   font-size: 5vh;
+  text-align: left;
+  margin-bottom: 40px;
 }
 
 .highlight {
   background-color: #FFC107;
 }
 
+#greeting {
+  font-weight: bold;
+}
+
 .welcome p {
-  margin-top: 40px;
   font-size: 3vh;  
+  display: inline;
 }
 
 .trackIcon {
@@ -44,6 +50,7 @@
   font-size: 4vh;
   text-align: center;
   opacity: 0;
+  color: black;
 }
 
 #imgWrapper1 {
@@ -145,14 +152,15 @@
 #home {
   grid-area: home;
   justify-self: end;
-  height: 1em;
+  height: 3em;
   padding-top: 15px;
   padding-right: 15px;
+  float: right;
 }
 
 .classes {
   grid-area: content;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 .st0 {
@@ -186,10 +194,6 @@
   fill:#808080;
 }
 
-.homeLink {
+.trackLink {
   color: black;
-}
-
-.homeIcon {
-  float:right;
 }

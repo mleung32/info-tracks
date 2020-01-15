@@ -44,10 +44,9 @@ class UX extends Component {
   render() {
     return (
       <div className="containerTrack">
-        <Link to="/">
-        {/* <FontAwesomeIcon icon={faHome} className="pointer" id="home" onClick={(e) => this.props.route(e.target.id)} size="2x" color="#544BF5"/> */}
-          <FontAwesomeIcon icon={faHome} className="pointer homeIcon"  size="2x" color="#544BF5"/>
-        </Link>
+          <Link to="/" id="home">
+            <FontAwesomeIcon icon={faHome} className="pointer" size="2x" color="#544BF5"/>
+          </Link>
         {this.showSidebar()}
         <UXClasses updateSidebar={this.updateSidebar}/>
       </div>
@@ -60,7 +59,7 @@ const UXWelcome = () => {
   return (
     <div className="sidebar">
       <h1>User Experience</h1>
-      <p>Quo nibh tantas ea, vim in dicat diceret. Ferri facete vocibus duo ad, doctus democritum usu cu. No has dicam fabulas, ne cum justo choro, ad his duis erroribus persequeris. Ad natum rationibus consequuntur usu, no quando libris eripuit ius.</p>
+      <p>Click on classes in the diagram to learn more about different offerings.</p>
     </div>
   )
 };

@@ -3,6 +3,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faHome} from "@fortawesome/free-solid-svg-icons"
 import DSClasses from "./img/DSClasses.js"
 import * as c from "./AllClasses.js"
+import {Link} from "react-router-dom"
 
 class DS extends Component {
   constructor(props) {
@@ -43,7 +44,9 @@ class DS extends Component {
   render() {
     return (
       <div className="containerTrack">
-        <FontAwesomeIcon icon={faHome} className="pointer" id="home" onClick={(e) => this.props.route(e.target.id)} size="2x" color="#544BF5"/>
+        <Link to="/" id="home">
+          <FontAwesomeIcon icon={faHome} className="pointer" size="2x" color="#544BF5"/>
+        </Link>
         {this.showSidebar()}
         <DSClasses updateSidebar={this.updateSidebar}/>
       </div>
@@ -55,21 +58,10 @@ const Welcome = () => {
   return (
     <div className="sidebar">
       <h1>Data Science</h1>
-      <p>Quo nibh tantas ea, vim in dicat diceret. Ferri facete vocibus duo ad, doctus democritum usu cu. No has dicam fabulas, ne cum justo choro, ad his duis erroribus persequeris. Ad natum rationibus consequuntur usu, no quando libris eripuit ius.</p>
+      <p>Click on classes in the diagram to learn more about different offerings.</p>
     </div>
   )
 };
-
-// const INFO247 = () => {
-//   return (
-//     <div className="sidebar">
-//     <h1>INFO 247</h1>
-//     <h2>Information Visualization and Presentation</h2>
-//     <p>The design and presentation of digital information. Use of graphics, animation, sound, visualization software, and hypermedia in presenting information to the user. Methods of presenting complex information to enhance comprehension and analysis. Incorporation of visualization techniques into human-computer interfaces. Course must be completed for a letter grade to fulfill degree requirements.</p>
-//   </div>
-//   )
-// };
-
 
 
 export default DS;
