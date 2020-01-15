@@ -1,0 +1,8 @@
+# System Files # 
+######################
+.DS_Store
+
+
+# React #
+######################
+node_modules/
