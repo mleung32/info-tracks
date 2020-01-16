@@ -48,7 +48,7 @@ class PM extends Component {
     return (
       <div className="containerTrack">
         <Link to="/" id="home">
-          <FontAwesomeIcon icon={faHome} className="pointer" size="2x" color="#544BF5"/>
+          <FontAwesomeIcon icon={faHome} className="pointer" size="lg" color="#544BF5"/>
         </Link>
         {this.showSidebar()}
         <PMClasses updateSidebar={this.updateSidebar}/>

@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(50px, 1fr)); 
   grid-template-rows: auto minmax(60px, 1fr);
-  grid-column-gap: 35px;
+  /* grid-column-gap: 35px; */
   grid-row-gap: 30px;
   grid-template-areas: "welcome welcome welcome welcome" 
                        "image1  image2  image3  image4";
@@ -34,6 +34,7 @@
 .welcome p {
   font-size: 3vh;  
   display: inline;
+  text-align: center;
 }
 
 .trackIcon {
@@ -141,12 +142,11 @@
 
 .sidebar {
   grid-area: sidebar;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #544BF5;
   color: white;
   margin: -8px;
   padding: 20px; 
-
 }
 
 #home {
@@ -196,4 +196,58 @@
 
 .trackLink {
   color: black;
+}
+
+@media (max-width: 700px) {
+  .containerHome {
+    grid-template-areas: "welcome"
+                         "image1"
+                         "image2"
+                         "image3"
+                         "image4";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,minmax(50px, auto));
+    justify-content: center;
+    grid-row-gap: 60px;
+  }
+
+  .trackIcon {
+    max-width: 80%;
+    height: auto;
+    margin-left: 10%;
+  }
+
+  .containerTrack {
+    grid-template-areas: "home"
+                         "sidebar" 
+                         "content";
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(50px, auto)
+                        minmax(50px, auto)
+                        1fr;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    /* height: 100vh; */
+    background-color: #544BF5;
+    color: white;
+    margin: -8px;
+    padding: 20px; 
+  }
+
+  #home {
+    float: left;
+  }
+}
+
+@media (min-width: 700px) {
+  .containerHome {
+    grid-column-gap: 35px;
+  }
+
+  .sidebar {
+    height:100vh;
+  }
 }

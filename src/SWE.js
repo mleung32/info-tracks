@@ -46,7 +46,7 @@ class SWE extends Component {
     return (            
       <div className="containerTrack">
         <Link to="/" id="home">
-          <FontAwesomeIcon icon={faHome} className="pointer classes" size="2x" color="#544BF5"/>
+          <FontAwesomeIcon icon={faHome} className="pointer classes" size="lg" color="#544BF5"/>
         </Link>
         {this.showSidebar()}
         <SWEClasses updateSidebar={this.updateSidebar}/>
